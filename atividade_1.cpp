@@ -6,21 +6,21 @@ using namespace std;
 
 //Função que contabiliza o número de trocas
 //qvs == que vai sair
-/*
-int total_trocas(char* v_palavra, int tamanho, char letra_qvs){
 
+int total_trocas(char* v_palavra, char letra_qvs){
+    int tam = strlen(v_palavra);
     int t_troca = 0;
 
-    for(int i=0; i < tamanho; i++){
+    for(int i=0; i < tam; i++){
         if (letra_qvs == v_palavra[i]){
-            t_troca ++;
+            t_troca += 1;
         }
     }
 
     return t_troca;
 }
 
-*/
+
 
 
 //criando função: Ponteiro para vetor palavra, um inteiro para o tamanho
@@ -28,13 +28,12 @@ int total_trocas(char* v_palavra, int tamanho, char letra_qvs){
 
 
 int main(){
-    int tamanhoV = 0;
-    char palavra[tamanhoV], nova_palavra[tamanhoV];
+    
+    char* palavra = new char[100];
+    char* nova_palavra = new char[100];
     char l_sai, l_entra;
 
-    cout << "Informe o total de letras da sua palavra: " << endl;
-    cin >> tamanhoV;
-
+    
     cout << "Informe sua palavra: " << endl;
     cin >> palavra;
 
@@ -46,7 +45,7 @@ int main(){
 
     cout << endl;
 
-    cout << total_trocas(&palavra, tamanhoV, l_sai);
+    cout << "Total de trocas efetuadas: " << total_trocas(palavra, l_sai) << endl;
 
 
 
