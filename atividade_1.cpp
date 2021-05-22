@@ -27,11 +27,11 @@ int total_trocas(char* v_palavra, char letra_qvs){
 
 char *Troca_letra (char *vet_palavra, char *palavra_nova, char letra_s, char letra_e){
 
-    int tam = strlen(vet_palavra);
+    int tam = strlen(vet_palavra);    
         
     for(int i=0; i < tam; i++){
         if(letra_s == vet_palavra[i]){
-            vet_palavra[i] = letra_e;
+           vet_palavra[i] = letra_e;
             palavra_nova = vet_palavra;
         }
     }
@@ -39,7 +39,6 @@ char *Troca_letra (char *vet_palavra, char *palavra_nova, char letra_s, char let
     return palavra_nova;
 
 }
-
 
 int main(){
     
@@ -60,15 +59,18 @@ int main(){
     cin >> l_entra;  
 
     cout << endl;
-
+    
     //Pegando o total de trocas e imprimindo os resultados
-
+    
     total = total_trocas(palavra, l_sai);
-    cout << palavra << endl;   
-    cout << Troca_letra(palavra, nova_palavra, l_sai, l_entra) << endl;    
+    
+    cout << palavra << endl; 
+    cout << Troca_letra(palavra, nova_palavra, l_sai, l_entra) << endl;  
     cout << "Total de trocas efetuadas: " << total << endl;  
 
 
 
     return 0;
 }
+
+
